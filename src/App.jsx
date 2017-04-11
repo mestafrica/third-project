@@ -11,20 +11,20 @@ import Contact from './components/Contact.jsx'
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <Header/>
-                <HashRouter>
-                    <div>
-                        <Switch>
-                            <Route exact path="/" component={Home}/>
-                            <Route path="/school" component={School} />
-                            <Route path="/contact" component={Contact} />
-                            <Route render={() => <h1>Page NOT Found</h1>}></Route>
-                        </Switch>
-                    </div>
-                </HashRouter>
-                <Footer/>
-            </div>
+            <BrowserRouter>
+                <div>
+                    <Header/>
+                        <div>
+                            <Switch>
+                                <Route exact path="/" component={Home}/>
+                                <Route path="/school" component={School} />
+                                <Route path="/contact" component={Contact} />
+                                <Route render={() => <h1>Page NOT Found</h1>}></Route>
+                            </Switch>
+                        </div>
+                    <Footer/>
+                </div>
+            </BrowserRouter>
         );
     }
 }

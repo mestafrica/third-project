@@ -11,7 +11,8 @@ module.exports = {
     },
     devServer: {
         port: 8888,
-        contentBase: "./public"
+        contentBase: "./public",
+        headers: { 'Access-Control-Allow-Origin': '*' }
     },
     module: {
         rules: [

@@ -6,15 +6,43 @@ class Header extends React.Component {
     render() {
         return (
             <div>
-                <br/>
-                <span style={{color:'green'}}>About</span>
-                <NavLink activeStyle={{color: 'green'}} to='/school'><span>School</span></NavLink>
-                <span>Weather</span>
-                <span>Incubator</span>
-                <span>News</span>
-                <NavLink activeClassName="my-active" to="/contact"><span>Contact</span></NavLink>
-                <hr/>
-                <h1>{this.props.schoolList}</h1>
+                <ul className="nav nav-tabs">
+                    <li role="presentation" >
+                        <NavLink to="/">
+                            <span>Home</span>
+                        </NavLink>
+                    </li>
+                    <li role="presentation" >
+                        <NavLink activeClassName="active" to="/about">
+                            <span>About</span>
+                        </NavLink>
+                    </li>
+                    <li role="presentation">
+                        <NavLink activeClassName="active" to='/school'>
+                            <span>School</span>
+                        </NavLink>
+                    </li>
+                    <li role="presentation">
+                        <NavLink activeClassName="active" to="/weather">
+                            <span>Weather</span>
+                        </NavLink>
+                    </li>
+                    <li role="presentation">
+                        <NavLink activeClassName="active" to="/incubator">
+                            <span>Incubator</span>
+                        </NavLink>
+                    </li>
+                    <li role="presentation">
+                        <NavLink activeClassName="active" to="/news">
+                            <span>News</span>
+                        </NavLink>
+                    </li>
+                    <li role="presentation">
+                        <NavLink activeClassName="active" to="/contact">
+                            <span>Contact</span>
+                        </NavLink>
+                    </li>
+                </ul>
             </div>
         );
     }
